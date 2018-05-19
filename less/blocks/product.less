@@ -1,0 +1,119 @@
+.product {
+  padding: 70px 0;
+
+  .product__caption {
+    margin: 0;
+    padding: 0;
+    font-family: @title-font-family;
+    font-size: @font-size-h2;
+    line-height: @line-height-h2;
+    color: @title-color;
+    text-align: center;
+    margin-bottom: 55px;
+  }
+
+  &__items {
+    display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    width: 25%;
+    margin-right: 15px;
+    text-align: center;
+    padding: 15px 10px 30px;
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+        box-shadow: 0px 28px 57px 0px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__header {
+    min-height: 243px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: @font-size-h3;
+    line-height: @line-height-h3;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+
+  &__item img {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 auto;
+  }
+
+  &__description {
+    flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+  }
+
+  &__price {
+    font-family: 'Montserrat-Black', Arial, sans-serif;
+    font-size: 29px;
+    color: #515461;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-top: auto;
+  }
+
+  &__button {
+    display: inline-block;
+      vertical-align: top;
+      width: 202px;
+    font-family: 'Lato-Bold', Arial, sans-serif;
+      text-transform: uppercase;
+      background-color: transparent;
+      border: 3px solid #43cb83;
+      border-radius: 30px;
+      padding: 2px 15px;
+      margin: 0 auto;
+    margin-top: auto;
+
+    &:hover {
+      background-color: #43cb83;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+
+  .product__items {
+    flex-wrap: wrap;
+  }
+
+  .product__item {
+    width: 49%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .product__item:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .product__title {
+      font-size: 18px;
+  }
+
+  .product__price {
+      font-size: 25px;
+  }
+}

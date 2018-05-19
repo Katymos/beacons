@@ -1,0 +1,131 @@
+.header {
+  padding: 35px 0;
+  background-image: url(../../img/bg-header.jpg);
+  background-size: cover;
+  color: #fff;
+
+  &__nav {
+    float: right;
+    width: 65%;
+    margin-bottom: 75px;
+  }
+
+  &__toggle {
+    display: none;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+    font-size: 0;
+  }
+
+  &__item {
+    display: inline-block;
+      vertical-align: top;
+      margin-right: 5px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+    & a {
+      position: relative;
+      display: block;
+      font-family: 'Lato-Medium', Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.5;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      padding: 15px 50px;
+      border-radius: 30px;
+    }
+
+    & a.active,
+    & a:hover {
+      font-family: 'Lato-Black', Arial, sans-serif;
+      color: #43cb83;
+      background-color: #fff;
+      box-shadow: 0px 10px 37px 0px rgba(0, 0, 0, 0.21);
+    }
+  }
+
+  &__column {
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 1px;
+    padding-left: 88px;
+      box-sizing: border-box;
+
+    & h1 {
+      font-family: 'Lato-Black', Arial, sans-serif;
+        font-size: @font-size-h1;
+        line-height: @line-height-h1;
+        text-transform: uppercase;
+        margin: 0 0 42px;
+    }
+  }
+
+  &__description {
+    font-family: 'Lato-Bold', Arial, sans-serif;
+      font-size: 24px;
+      line-height: 1.4;
+      margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 17px;
+      line-height: 1.75;
+      text-align: justify;
+      margin-bottom: 40px;
+  }
+
+  &__banner {
+    position: absolute;
+    top: -70px;
+    left: 0;
+    right: 0;
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .header__nav {
+    float: none;
+    width: 100%;
+  }
+
+  .header__banner {
+      top: 0;
+  }
+
+  .header__column h1 {
+      font-size: 30px;
+      margin: 0 0 35px;
+  }
+
+  .header__description {
+      font-size: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .header__column {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .header__banner {
+      display: none;
+  }
+}
